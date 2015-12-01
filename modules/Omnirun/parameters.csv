@@ -1,0 +1,5 @@
+model,model_name,cv_holdout,input_data,save_path,sample_size,seed,ratio,neighbors,tree_depth,min_leaf_size
+knn,knn_10,0.2,/home/matt/omnirun_test/tdm.csv,/home/matt/omnirun_test/results,100,100,,3,,
+knn,knn_20,0.2,/home/matt/omnirun_test/tdm.csv,/home/matt/omnirun_test/results,100,100,,5,,
+tree,tree_20,0.2,/home/matt/omnirun_test/tdm.csv,/home/matt/omnirun_test/results,100,100,,,,5
+tree,tree_50,0.2,/home/matt/omnirun_test/tdm.csv,/home/matt/omnirun_test/results,100,100,,,,10
