@@ -1,11 +1,19 @@
 # takes the raw testing data from carefuson and creates and saves a term document matrix 
-class create_tdm(object):
-
 import pandas as pd
 import numpy as np
 import textmining
 import random as rn
 from os import listdir
+from os.path import isfile, join
+from os import listdir
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfpage import PDFPage
+from cStringIO import StringIO
+
+class create_tdm(object):
+
 
     def __init__(self, path, subset = None):
         self.path = path
@@ -127,13 +135,6 @@ from os import listdir
 
 class pdf_converter(object):
 
-from os.path import isfile, join
-from os import listdir
-from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-from pdfminer.pdfpage import PDFPage
-from cStringIO import StringIO
 
     def __init__(self, input_dir, output_dir):
         self.input_dir = input_dir
