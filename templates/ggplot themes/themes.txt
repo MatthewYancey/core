@@ -1,0 +1,9 @@
+# Basic FA Theme
+FAGreen = "#A4AE1B"
+FAGray = "#A6A6A6"
+FABlue = "#375C7D"
+
+theme(panel.grid.minor = element_blank(),
+      panel.grid.major = element_line("#D9D9D9"),
+      panel.border = element_rect("black", fill = NA),
+      panel.background = element_rect(fill = "#FAFAFA"))
