@@ -13,7 +13,8 @@ class classification(object):
         model_dict = {'knn': models.knn_model, 
             'lev': models.levenshtein_model,
             'naive bayes': models.naive_bayes_model, 
-            'tree': models.tree_model}
+            'tree': models.decision_tree_model,
+            'perceptron': models.perceptron_nn_model}
 
         # reads in the parameters files
         parameters = pd.read_csv(parameters_file_path)
@@ -44,9 +45,11 @@ class classification(object):
 
         # goes through each of the models specified in the parameters csv
         for i, row in parameters.iterrows():
-            model = model_dict[row['model'].lower()](data, row['cv_holdout'], row['save_path'], observations, 
+            model = model_dict[row['model'].lower()](data, row['cv_holdout'], row['save_path'], row['model_name'], observations, 
                                                           row['seed'], row['ratio'], row['neighbors'], 
-                                                          row['tree_depth'], row['min_leaf_size'])
+                                                          row['tree_depth'], row['min_leaf_size'], row['nn_batch_size'],
+                                                          row['nn_features_1'], row['nn_features_2'], row['nn_training_epochs'],
+                                                          row['nn_learning_rate'])
             model_results = model.results
 
             # generates some accuracy stats that will be used in the results_summary data frame
@@ -68,7 +71,6 @@ class classification(object):
             else:
                 results = model_results
                 # makes some of the column names unique
-                print(model_results.columns)
                 new_column_names = [c + '_' + row['model_name'] for c in model_results.columns]
                 if observations is not None:
                     new_column_names = [model_results.columns[0]] + new_column_names[1:3] + [model_results.columns[3]]

@@ -14,7 +14,6 @@ from cStringIO import StringIO
 
 class create_tdm(object):
 
-
     def __init__(self, path, subset = None):
         self.path = path
 
