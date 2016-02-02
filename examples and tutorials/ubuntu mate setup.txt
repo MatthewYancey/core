@@ -1,12 +1,8 @@
 # increase  the storage to the entire card
 sudo fdisk /dev/mmcblk0
-
 (d, 2), (n, p, 2, enter, enter)
-
 sudo reboot now
-
 sudo resize2fs /dev/mmcblk0p2
-
 
 # Anaconda
 wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
@@ -15,10 +11,15 @@ conda install numpy
 conda install scipy
 conda install pandas
 conda install scikit-learn
-
-# this needs work
-pip3 install jupyter
-
+conda instal ipython
 
 # chromium
 sudo apt-get install chromium-browser
+
+# github repos
+sudo apt-get install git
+mkdir GitHub
+cd GitHub
+git clone https://github.com/MatthewYancey/core.git
+git clone https://github.com/MatthewYancey/minutebook.git
+
