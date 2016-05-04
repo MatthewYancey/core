@@ -1,4 +1,4 @@
 import omnirun
 
-parameters_csv = '/home/matt/omnirun_test/parameters.csv'
+parameters_csv = '/home/matt/core/modules/Omnirun/parameters.csv'
 omnirun.classification(parameters_csv)

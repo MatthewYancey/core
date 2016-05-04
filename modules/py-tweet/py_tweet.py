@@ -1,13 +1,13 @@
 from twitter import *
 
-class direct_message(object):
+# class direct_message(object):
+#
+#     def __init__(self):
 
-    def __init__(self, text_message):
+access_token = '727068165067264001-6txuLk1EPrSCpIThbnEyvIYMpxKHHw6'
+access_token_secret = 'bQjv2x1HgXcRH8CioXNsIGu72KbI5too6enWDTI4Ldy9i'
+consumer_key = 'vTfFOFQodNkWAZfX352WkXOAD'
+consumer_secret = 'BA2AR5vD0IUHp8cGppGMkOe9zuqUuvdqhIvcohEauyx3r2ZpHF'
+t = Twitter(auth = OAuth(access_token, access_token_secret, consumer_key, consumer_secret))
 
-        access_token = '2157858768-wPO8dLiXGW8sPVQg3Bct1NdAGvwGFYLqyZVhY2M'
-        access_token_secret = 'oK14HEuwT2g9blazr8NSReSMO2YP1b9eZ5Q3sbI2cnERh'
-        consumer_key = '1PVrW5SonNbS1spTrffHRKZMK'
-        consumer_secret = '0MCM2KTan3Pb83K4BQyRHG8adA2UCzZWNKgK59mbDrSDq84k1l'
-        t = Twitter(auth = OAuth(access_token, access_token_secret, consumer_key, consumer_secret))
-
-        t.direct_messages.new(user = 'mattcyancey', text = text_message)
+t.statuses.update(status = 'test 004')
