@@ -1,0 +1,50 @@
+! Use a nice truetype font and size by default...
+xterm*faceName: Fantasque Sans Mono
+xterm*faceSize: 14
+
+! double-click to select whole URLs :D
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+! colors
+xterm*foreground:   #dadfea
+xterm*background:   #22252d
+xterm*cursorColor:  #dadfea
+xterm*color0:       #404246
+xterm*color8:       #636b78
+xterm*color1:       #935aa7
+xterm*color9:       #c78ed8
+xterm*color2:       #8c9440
+xterm*color10:      #b5bd68
+xterm*color3:       #de935f
+xterm*color11:      #f0c674
+xterm*color4:       #9c4343
+xterm*color12:      #bf616a
+xterm*color5:       #5f819d
+xterm*color13:      #81a2be
+xterm*color6:       #34b7a6
+xterm*color14:      #5dccac
+xterm*color7:       #707880
+xterm*color15:      #c5c8c6
+
+! right hand side scrollbar...
+xterm*rightScrollBar: true
+xterm*ScrollBar: false
+
+! stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
+
+XTerm.vt100.translations:	#override \n Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD) \n Ctrl <KeyPress> Insert: copy-selection(PRIMARY) \n Shift <KeyPress> Insert: insert-selection(PRIMARY) \n Meta <KeyPress> M: print() \n
+
+
+rofi.color-enabled: true
+rofi.color-window: #22252d, #22252d, #636b78
+rofi.color-normal: argb:f000000, #5dccac, argb:e000000, argb:5000000, #bf616a
+rofi.color-active: argb:f000000, #268bd2, argb:e000000, argb:2000000, #fdf6e3
+rofi.color-urgent: argb:f000000, #dc322f, argb:e000000, argb:d000000, #fdf6e3
+
+rofi.separator-style: dash
+rofi.opacity: 80
+rofi.lines: 10
+rofi.fullscreen: true
+rofi.padding: 450
+rofi.font: Hasklig 24

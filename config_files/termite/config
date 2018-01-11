@@ -1,0 +1,46 @@
+[options]
+
+font = Fantasque Sans Mono 14
+mouse_autohide = true
+clickable_url = true
+browser = firefox
+
+[colors]
+
+# special
+foreground      = #dadfea
+foreground_bold = #dadfea
+cursor          = #dadfea
+background      = #22252d
+
+# black
+color0  = #30343f
+color8  = #636b78
+
+# red
+color1  = #bf5e67
+color9  = #bf616a
+
+# green
+color2  = #a3be8c
+color10 = #a3be8c
+
+# yellow
+color3  = #ebc57a
+color11 = #ebcb8b
+
+# blue
+color4  = #7292b3
+color12 = #8fa1b3
+
+# magenta
+color5  = #b475a8
+color13 = #b48ead
+
+# cyan
+color6  = #83b5b3
+color14 = #96b5b4
+
+# white
+color7  = #dadfea
+color15 = #f9fbff
