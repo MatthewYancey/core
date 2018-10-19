@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 
+# does just what it says
 def one_hot_encoding(df):
     cats = df.ix[:, df.dtypes == object]
     one_hot = pd.get_dummies(cats)
