@@ -1,4 +1,5 @@
-#Beautiful Soup
+# Script that demos the basic beautifulSoup functionality
+# Beautiful Soup
 from bs4 import BeautifulSoup
 import requests
 
